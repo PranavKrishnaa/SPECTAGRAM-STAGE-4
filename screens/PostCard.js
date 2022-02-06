@@ -76,6 +76,7 @@ export default class PostCard extends Component {
               </View>
             </View>
           </View>
+          </View>
         </TouchableOpacity>
       );
     }

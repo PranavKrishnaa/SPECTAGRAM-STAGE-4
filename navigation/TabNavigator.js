@@ -5,8 +5,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { RFValue } from "react-native-responsive-fontsize";
 
-import Feed from "./Feed"; 
-import CreatePost from "./CreatePost"; 
+import Feed from "./screens/Feed"; 
+import CreatePost from "./screens/CreatePost"; 
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -20,7 +20,7 @@ const BottomTabNavigator = () => {
           let iconName;
           if (route.name === "Feed") {
             iconName = focused ? "home" : "home-outline";
-          } else if (route.name === "Create Story") {
+          } else if (route.name === "Create Post") {
             iconName = focused ? "add-circle" : "add-circle-outline";
           }
           return (
@@ -37,7 +37,7 @@ const BottomTabNavigator = () => {
       inactiveColor={"gray"}
     >
       <Tab.Screen name="Feed" component={Feed} />
-      <Tab.Screen name="Create Story" component={CreatePost} />
+      <Tab.Screen name="Create Post" component={CreatePost} />
     </Tab.Navigator>
     );
 };

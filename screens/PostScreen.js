@@ -39,20 +39,9 @@ export default class postScreen extends Component {
     this._loadFontsAsync();
   }
 
-  async initiateTTS(caption, author) {
-    const current_color = this.state.speakerColor;
-    this.setState({
-      speakerColor: current_color === 'gray' ? '#ee8249' : 'gray',
-    });
-    if (current_color === 'gray') {
-      Speech.speak(`${title} by ${author}`);
-      Speech.speak(story);
-      Speech.speak('The moral of the story is!');
-      Speech.speak(moral);
-    } else {
-      Speech.stop();
-    }
-  }
+  
+    
+  
   render() {
     if (!this.props.route.params) {
       this.props.navigation.navigate('Home');
